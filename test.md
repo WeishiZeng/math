@@ -1,6 +1,3 @@
-# head
-## head2
-
 ## Peano Axioms
 
 - **(Axiom 2.1)** Zero
