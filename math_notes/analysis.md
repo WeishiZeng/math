@@ -104,9 +104,9 @@ Axioms come mainly in two different kinds: existential and universal.
 - *(Defnition 3.1.27)* Difference Sets
     - $A \backslash B := \lbrace x \in A \mid x\notin B  \rbrace$
 - **(Axiom 3.6)** Replacement
-    - $(\forall x \in A) \forall y \lbrace [\forall y_1 \forall y_2 (P(x,y1) \land P(x,y2) \implies y_1 = y_2)] \implies Set \: \lbrace y | (\exists x \in A) P(x,y)  \rbrace \: exists  \rbrace$
-      - Informal: $(\forall x \in A) \forall y [\text{at most one y for any x, s.t. P(x,y) holds} \implies \: \lbrace y | (\exists x \in A) P(x,y)  \rbrace \text{exists}]$
-    - $z \in \lbrace y | (\exists x \in A) P(x,y)  \rbrace \iff (\exists x \in A) P(x,z)$
+    - $(\forall x \in A) \forall y \lbrace [\forall y_1 \forall y_2 (P(x,y1) \land P(x,y2) \implies y_1 = y_2)] \implies Set \: \lbrace y \mid (\exists x \in A) P(x,y)  \rbrace \: exists  \rbrace$
+      - Informal: $(\forall x \in A) \forall y [\text{at most one y for any x, s.t. P(x,y) holds} \implies \: \lbrace y \mid (\exists x \in A) P(x,y)  \rbrace \text{exists}]$
+    - $z \in \lbrace y \mid (\exists x \in A) P(x,y)  \rbrace \iff (\exists x \in A) P(x,z)$
 - **(Axiom 3.7)** Infinity
     - $\mathbb{N}$ exists, and its elements are called natural numbers.
     - $0 \in \mathbb{N} \land (n \in \mathbb{N} \implies n++ \in \mathbb{N})$ and Peano Axiom holds
@@ -117,15 +117,15 @@ Axioms come mainly in two different kinds: existential and universal.
   -  $(\forall set A \neq \emptyset) (\exists x \in A) [x \: is \: not \: a \: set \lor x \cap A  = \emptyset]$
 - **(Axiom 3.10)** Power set
   -  $(\forall set X) (\forall set Y) (Y^X \: exists)$
-  - $Y^X := \lbrace f | f: X \to Y  \rbrace$
+  - $Y^X := \lbrace f \mid f: X \to Y  \rbrace$
     - $f \in Y^X \iff f \: is \: a \: function \: with \: domain \: X \: and \: range \: Y$
 - **(Axiom 3.11)** Union
   -  $(\forall x \in A) [x \: is \: a \: set] \implies \bigcup A \: exists$
   - $\bigcup A$ is defined as:
     - $x \in \bigcup A \iff (\exists S \in A) x \in S$
-  - $\bigcup_{\alpha \in I} A_{\alpha} := \bigcup\lbrace A_\alpha | \alpha \in I \rbrace$
+  - $\bigcup_{\alpha \in I} A_{\alpha} := \bigcup\lbrace A_\alpha \mid \alpha \in I \rbrace$
     - $x \in \bigcup_{\alpha \in I} A_{\alpha} \iff (\exists \alpha \in I) x \in A_\alpha$
-  - $\bigcap_{\alpha \in I} A_{\alpha} := \lbrace x \in A_\beta | (\forall \alpha \in I) x \in A_\alpha \rbrace$
+  - $\bigcap_{\alpha \in I} A_{\alpha} := \lbrace x \in A_\beta \mid (\forall \alpha \in I) x \in A_\alpha \rbrace$
     - $x \in \bigcap_{\alpha \in I} A_{\alpha} \iff (\forall \alpha \in I) y \in A_\alpha$
 
 ## Functions
@@ -154,23 +154,23 @@ Axioms come mainly in two different kinds: existential and universal.
     - $(\forall x \in X) \iota_{X \to Y}(x):=x$
     - Identity map: $\iota_{X \to X}: X \to X$
 - *(Definition 3.4.1)* Image of sets
-    - $f(S) := \lbrace f(x) | x \in S  \rbrace$
+    - $f(S) := \lbrace f(x) \mid x \in S  \rbrace$
       - $|$ reads: "for some"
       - $y \in f(S) \iff (\exists x \in X) y = f(x)$
       - $f : X \to Y$, $S \subseteq X$, $f(S) \subseteq Y$
 - *(Definition 3.4.4)* Inverse Images
-    - $f^{-1}(U) := \lbrace x \in X | f(x) \in U  \rbrace$
+    - $f^{-1}(U) := \lbrace x \in X \mid f(x) \in U  \rbrace$
       - $|$ reads: "such that", "and"
       - $x \in f^{-1}(U) \iff f(x) \in U$
       - $f : X \to Y$, $U \subseteq Y$
 - Function and set with |
-    - *(Axiom 3.5 Specification)* Set $\lbrace x \in A | P(x) \rbrace$ exists
-    - *(Axiom 3.6 Replacement)* Set $\lbrace y | (\exists x \in A) P(x,y)  \rbrace$ exists
-      - $z \in \lbrace y | (\exists x \in A) P(x,y)  \rbrace \iff (\exists x \in A) P(x,z)$
-    - *(Example 3.1.32)* $\lbrace f(x) | x \in A  \rbrace$
-      - shorthand for: $\lbrace  y | y = f(x) \text{ for some } x \in A \rbrace$
-      - $y \in \lbrace f(x) | x \in A  \rbrace \iff (\exists x \in A) y = f(x)$
-    - *(Definition 3.4.1)* $f(S) := \lbrace f(x) | x \in S  \rbrace$
+    - *(Axiom 3.5 Specification)* Set $\lbrace x \in A \mid P(x) \rbrace$ exists
+    - *(Axiom 3.6 Replacement)* Set $\lbrace y \mid (\exists x \in A) P(x,y)  \rbrace$ exists
+      - $z \in \lbrace y \mid (\exists x \in A) P(x,y)  \rbrace \iff (\exists x \in A) P(x,z)$
+    - *(Example 3.1.32)* $\lbrace f(x) \mid x \in A  \rbrace$
+      - shorthand for: $\lbrace  y \mid y = f(x) \text{ for some } x \in A \rbrace$
+      - $y \in \lbrace f(x) \mid x \in A  \rbrace \iff (\exists x \in A) y = f(x)$
+    - *(Definition 3.4.1)* $f(S) := \lbrace f(x) \mid x \in S  \rbrace$
 
 ### Cartesian Product of Set
 - *(Definition 3.5.1)* Ordered pair
@@ -178,7 +178,7 @@ Axioms come mainly in two different kinds: existential and universal.
       - Proof by construction: $(x, y) := \lbrace \lbrace x \rbrace, \lbrace x, y \rbrace \rbrace$
     - Ordered pair equality: $(x, y) = (x', y') \iff x = x' \land y = y'$
 - *(Definition 3.5.4)* Cartesian Product (Collection of ordered pairs)
-  - $X \times Y := \lbrace (x, y) | x \in X \land y \in Y \rbrace$
+  - $X \times Y := \lbrace (x, y) \mid x \in X \land y \in Y \rbrace$
     - $X \times Y$ is a set, and it exists.
     - $|$ reads "for some"
     - $a \in (X \times Y) \iff (\exists x \in X) (\exists y \in Y) a = (x, y)$
@@ -196,7 +196,7 @@ Axioms come mainly in two different kinds: existential and universal.
       - $\prod_{i=1}^n X_i$
       - $(X_1 \times ... \times X_n)$
     - Definition
-      - $\prod_{1 \leq i \leq n} X_i := \lbrace (x_i)_{1 \leq i \leq n} | (\forall i \in \lbrace 1,...,n \rbrace) x_i \in X_i \rbrace$
+      - $\prod_{1 \leq i \leq n} X_i := \lbrace (x_i)_{1 \leq i \leq n} \mid (\forall i \in \lbrace 1,...,n \rbrace) x_i \in X_i \rbrace$
         - $a \in \prod_{1 \leq i \leq n} X_i \iff [(\forall i) [(1 \leq i \leq n) \implies(\exists x_i) x_i \in X_i]] \land a = (x_j)_{1 \leq j \leq n}$
 - *(Excercise 3.5.7)* Coordinate Function and Direct Sum
   - Coordinate functions on $X \times Y$
@@ -206,7 +206,7 @@ Axioms come mainly in two different kinds: existential and universal.
     - $h$ is the direct sum of $f$ and $g$, denoted $h := f \bigoplus g$
 - *(Excercise 3.5.10)* Graph
   - $f : X \to Y$ is a function
-  - Graph of $f$ is a set: $\lbrace (x, f(x)) | x \in X \rbrace$
+  - Graph of $f$ is a set: $\lbrace (x, f(x)) \mid x \in X \rbrace$
 
 ## Format
 
