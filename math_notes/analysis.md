@@ -155,15 +155,15 @@ Axioms come mainly in two different kinds: existential and universal.
     - Identity map: $\iota_{X \to X}: X \to X$
 - *(Definition 3.4.1)* Image of sets
     - $f(S) := \lbrace f(x) \mid x \in S  \rbrace$
-      - $|$ reads: "for some"
+      - $ \vert $ reads: "for some"
       - $y \in f(S) \iff (\exists x \in X) y = f(x)$
       - $f : X \to Y$, $S \subseteq X$, $f(S) \subseteq Y$
 - *(Definition 3.4.4)* Inverse Images
     - $f^{-1}(U) := \lbrace x \in X \mid f(x) \in U  \rbrace$
-      - $|$ reads: "such that", "and"
+      - $ \vert $ reads: "such that", "and"
       - $x \in f^{-1}(U) \iff f(x) \in U$
       - $f : X \to Y$, $U \subseteq Y$
-- Function and set with |
+- Function and set with $ \vert $ 
     - *(Axiom 3.5 Specification)* Set $\lbrace x \in A \mid P(x) \rbrace$ exists
     - *(Axiom 3.6 Replacement)* Set $\lbrace y \mid (\exists x \in A) P(x,y)  \rbrace$ exists
       - $z \in \lbrace y \mid (\exists x \in A) P(x,y)  \rbrace \iff (\exists x \in A) P(x,z)$
@@ -180,7 +180,7 @@ Axioms come mainly in two different kinds: existential and universal.
 - *(Definition 3.5.4)* Cartesian Product (Collection of ordered pairs)
   - $X \times Y := \lbrace (x, y) \mid x \in X \land y \in Y \rbrace$
     - $X \times Y$ is a set, and it exists.
-    - $|$ reads "for some"
+    - $ \vert $ reads "for some"
     - $a \in (X \times Y) \iff (\exists x \in X) (\exists y \in Y) a = (x, y)$
 - *(Definition 3.5.7)* Ordered n-tuple and n-fold cartesian product
   - Ordered n-tuple
