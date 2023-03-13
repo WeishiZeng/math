@@ -82,19 +82,19 @@ Axioms come mainly in two different kinds: existential and universal.
 - *(Definition 3.1.4)* Equality
     - $A = B \iff \forall x [(x \in A \implies x \in B) \land (x \in B \implies x \in A)]$
 - **(Axiom 3.2)** Empty set exists
-    - $(\exists \emptyset) (\forall \:object\:x ) x \notin \emptyset$
+    - $(\exists \emptyset) (\forall \ object \ x ) x \notin \emptyset$
 - *(Lemma 3.1.6)* Single choice
     - $A \neq \emptyset \implies \exists x (x \in A)$
     - Note: the antecedent assumes non empty set A exists. this lemma does NOT prove that A exists
 - **(Axiom 3.3)** Singleton/pair sets exist
-    - Singleton $\lbrace a \rbrace$: $\forall (object \: a) \exists A \forall (object \: y) (y \in A \iff y = a)$
-    - Pair $\lbrace a, b \rbrace$: $\forall (object \: a) \forall (object \: b) \exists A \forall (object \: y)(y \in A \iff y = a \lor y = b)$
+    - Singleton $\lbrace a \rbrace$: $\forall (object \ a) \exists A \forall (object \ y) (y \in A \iff y = a)$
+    - Pair $\lbrace a, b \rbrace$: $\forall (object \ a) \forall (object \ b) \exists A \forall (object \ y)(y \in A \iff y = a \lor y = b)$
 - **(Axiom 3.4)** Pairwise union exists
-    - $\forall A \forall B [A \cup B \: exists]$
+    - $\forall A \forall B [A \cup B \ exists]$
     - $A \cup B$ is defined as:
       - $\forall x (x \in A \cup B \iff x \in A \lor x \in B)$
 - *(Defnition 3.1.15)* Subsets
-    - $A \subseteq B \iff \forall \:object\:x (x \in A \implies x \in B)$
+    - $A \subseteq B \iff \forall \ object \ x (x \in A \implies x \in B)$
 - **(Axiom 3.5)** Axiom of specification/separation
     - Set $\lbrace x \in A \mid P(x) \rbrace$ exists
     - And it's defined as: $(\forall y) [y \in \lbrace x \in A \mid P(x) \rbrace \iff y \in A \land P(y)]$
@@ -104,23 +104,23 @@ Axioms come mainly in two different kinds: existential and universal.
 - *(Defnition 3.1.27)* Difference Sets
     - $A \backslash B := \lbrace x \in A \mid x\notin B  \rbrace$
 - **(Axiom 3.6)** Replacement
-    - $(\forall x \in A) \forall y \lbrace [\forall y_1 \forall y_2 (P(x,y1) \land P(x,y2) \implies y_1 = y_2)] \implies Set \: \lbrace y \mid (\exists x \in A) P(x,y)  \rbrace \: exists  \rbrace$
-      - Informal: $(\forall x \in A) \forall y [\text{at most one y for any x, s.t. P(x,y) holds} \implies \: \lbrace y \mid (\exists x \in A) P(x,y)  \rbrace \text{exists}]$
+    - $(\forall x \in A) \forall y \lbrace [\forall y_1 \forall y_2 (P(x,y1) \land P(x,y2) \implies y_1 = y_2)] \implies Set \ \lbrace y \mid (\exists x \in A) P(x,y)  \rbrace \ exists  \rbrace$
+      - Informal: $(\forall x \in A) \forall y [\text{at most one y for any x, s.t. P(x,y) holds} \implies \ \lbrace y \mid (\exists x \in A) P(x,y)  \rbrace \text{exists}]$
     - $z \in \lbrace y \mid (\exists x \in A) P(x,y)  \rbrace \iff (\exists x \in A) P(x,z)$
 - **(Axiom 3.7)** Infinity
     - $\mathbb{N}$ exists, and its elements are called natural numbers.
     - $0 \in \mathbb{N} \land (n \in \mathbb{N} \implies n++ \in \mathbb{N})$ and Peano Axiom holds
 - **(Axiom 3.8)** Universal specification (**Not chosen**)
-  -  $\forall P [\forall x P(x) \: exists \implies \lbrace x \mid P(x) \rbrace \: exists]$
-  - And it's defined as: $(\forall y) [y \in \lbrace x \mid P(x) \rbrace \iff P(y) \: is \: true]$
+  -  $\forall P [\forall x P(x) \ exists \implies \lbrace x \mid P(x) \rbrace \ exists]$
+  - And it's defined as: $(\forall y) [y \in \lbrace x \mid P(x) \rbrace \iff P(y) \ is \ true]$
 - **(Axiom 3.9)** Regularity/Foundation
-  -  $(\forall set A \neq \emptyset) (\exists x \in A) [x \: is \: not \: a \: set \lor x \cap A  = \emptyset]$
+  -  $(\forall set A \neq \emptyset) (\exists x \in A) [x \ is \ not \ a \ set \lor x \cap A  = \emptyset]$
 - **(Axiom 3.10)** Power set
-  -  $(\forall set X) (\forall set Y) (Y^X \: exists)$
+  -  $(\forall set X) (\forall set Y) (Y^X \ exists)$
   - $Y^X := \lbrace f \mid f: X \to Y  \rbrace$
-    - $f \in Y^X \iff f \: is \: a \: function \: with \: domain \: X \: and \: range \: Y$
+    - $f \in Y^X \iff f \ is \ a \ function \ with \ domain \ X \ and \ range \ Y$
 - **(Axiom 3.11)** Union
-  -  $(\forall x \in A) [x \: is \: a \: set] \implies \bigcup A \: exists$
+  -  $(\forall x \in A) [x \ is \ a \ set] \implies \bigcup A \ exists$
   - $\bigcup A$ is defined as:
     - $x \in \bigcup A \iff (\exists S \in A) x \in S$
   - $\bigcup_{\alpha \in I} A_{\alpha} := \bigcup\lbrace A_\alpha \mid \alpha \in I \rbrace$
