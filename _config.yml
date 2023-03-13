@@ -4,4 +4,4 @@ relative_links:
   enabled: true
   collections: true
 include:
-  - math-notes.md
+  - analysis.md

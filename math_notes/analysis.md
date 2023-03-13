@@ -1,5 +1,4 @@
 # Natural Numbers
-
 ## Peano Axioms
 
 - **(Axiom 2.1)** Zero
@@ -88,8 +87,8 @@ Axioms come mainly in two different kinds: existential and universal.
     - $A \neq \emptyset \implies \exists x (x \in A)$
     - Note: the antecedent assumes non empty set A exists. this lemma does NOT prove that A exists
 - **(Axiom 3.3)** Singleton/pair sets exist
-    - Singleton $\{a\}$: $\forall (object \: a) \exists A \forall (object \: y) (y \in A \iff y = a)$
-    - Pair $\{a, b\}$: $\forall (object \: a) \forall (object \: b) \exists A \forall (object \: y)(y \in A \iff y = a \lor y = b)$
+    - Singleton $\lbrace a \rbrace$: $\forall (object \: a) \exists A \forall (object \: y) (y \in A \iff y = a)$
+    - Pair $\lbrace a, b \rbrace$: $\forall (object \: a) \forall (object \: b) \exists A \forall (object \: y)(y \in A \iff y = a \lor y = b)$
 - **(Axiom 3.4)** Pairwise union exists
     - $\forall A \forall B [A \cup B \: exists]$
     - $A \cup B$ is defined as:
@@ -97,36 +96,36 @@ Axioms come mainly in two different kinds: existential and universal.
 - *(Defnition 3.1.15)* Subsets
     - $A \subseteq B \iff \forall \:object\:x (x \in A \implies x \in B)$
 - **(Axiom 3.5)** Axiom of specification/separation
-    - Set $\{x \in A \mid P(x)\}$ exists
-    - And it's defined as: $(\forall y) [y \in \{x \in A \mid P(x)\} \iff y \in A \land P(y)]$
+    - Set $\lbrace x \in A \mid P(x) \rbrace$ exists
+    - And it's defined as: $(\forall y) [y \in \lbrace x \in A \mid P(x) \rbrace \iff y \in A \land P(y)]$
 - *(Defnition 3.1.23)* Intersections
-    - $S_1 \cap S_2 := \{x \in S_1 \mid x\in S_2 \}$
+    - $S_1 \cap S_2 := \lbrace x \in S_1 \mid x\in S_2  \rbrace$
     - In other words: $x \in S_1 \cap S_2 \iff x \in S_1 \land x\in S_2$
 - *(Defnition 3.1.27)* Difference Sets
-    - $A \backslash B := \{x \in A \mid x\notin B \}$
+    - $A \backslash B := \lbrace x \in A \mid x\notin B  \rbrace$
 - **(Axiom 3.6)** Replacement
-    - $(\forall x \in A) \forall y \{[\forall y_1 \forall y_2 (P(x,y1) \land P(x,y2) \implies y_1 = y_2)] \implies Set \: \{y | (\exists x \in A) P(x,y) \} \: exists \}$
-      - Informal: $(\forall x \in A) \forall y [\text{at most one y for any x, s.t. P(x,y) holds} \implies \: \{y | (\exists x \in A) P(x,y) \} \text{exists}]$
-    - $z \in \{y | (\exists x \in A) P(x,y) \} \iff (\exists x \in A) P(x,z)$
+    - $(\forall x \in A) \forall y \lbrace [\forall y_1 \forall y_2 (P(x,y1) \land P(x,y2) \implies y_1 = y_2)] \implies Set \: \lbrace y | (\exists x \in A) P(x,y)  \rbrace \: exists  \rbrace$
+      - Informal: $(\forall x \in A) \forall y [\text{at most one y for any x, s.t. P(x,y) holds} \implies \: \lbrace y | (\exists x \in A) P(x,y)  \rbrace \text{exists}]$
+    - $z \in \lbrace y | (\exists x \in A) P(x,y)  \rbrace \iff (\exists x \in A) P(x,z)$
 - **(Axiom 3.7)** Infinity
     - $\mathbb{N}$ exists, and its elements are called natural numbers.
     - $0 \in \mathbb{N} \land (n \in \mathbb{N} \implies n++ \in \mathbb{N})$ and Peano Axiom holds
 - **(Axiom 3.8)** Universal specification (**Not chosen**)
-  -  $\forall P [\forall x P(x) \: exists \implies \{x \mid P(x)\} \: exists]$
-  - And it's defined as: $(\forall y) [y \in \{x \mid P(x)\} \iff P(y) \: is \: true]$
+  -  $\forall P [\forall x P(x) \: exists \implies \lbrace x \mid P(x) \rbrace \: exists]$
+  - And it's defined as: $(\forall y) [y \in \lbrace x \mid P(x) \rbrace \iff P(y) \: is \: true]$
 - **(Axiom 3.9)** Regularity/Foundation
   -  $(\forall set A \neq \emptyset) (\exists x \in A) [x \: is \: not \: a \: set \lor x \cap A  = \emptyset]$
 - **(Axiom 3.10)** Power set
   -  $(\forall set X) (\forall set Y) (Y^X \: exists)$
-  - $Y^X := \{f | f: X \to Y \}$
+  - $Y^X := \lbrace f | f: X \to Y  \rbrace$
     - $f \in Y^X \iff f \: is \: a \: function \: with \: domain \: X \: and \: range \: Y$
 - **(Axiom 3.11)** Union
   -  $(\forall x \in A) [x \: is \: a \: set] \implies \bigcup A \: exists$
   - $\bigcup A$ is defined as:
     - $x \in \bigcup A \iff (\exists S \in A) x \in S$
-  - $\bigcup_{\alpha \in I} A_{\alpha} := \bigcup\{A_\alpha | \alpha \in I\}$
+  - $\bigcup_{\alpha \in I} A_{\alpha} := \bigcup\lbrace A_\alpha | \alpha \in I \rbrace$
     - $x \in \bigcup_{\alpha \in I} A_{\alpha} \iff (\exists \alpha \in I) x \in A_\alpha$
-  - $\bigcap_{\alpha \in I} A_{\alpha} := \{x \in A_\beta | (\forall \alpha \in I) x \in A_\alpha\}$
+  - $\bigcap_{\alpha \in I} A_{\alpha} := \lbrace x \in A_\beta | (\forall \alpha \in I) x \in A_\alpha \rbrace$
     - $x \in \bigcap_{\alpha \in I} A_{\alpha} \iff (\forall \alpha \in I) y \in A_\alpha$
 
 ## Functions
@@ -155,31 +154,31 @@ Axioms come mainly in two different kinds: existential and universal.
     - $(\forall x \in X) \iota_{X \to Y}(x):=x$
     - Identity map: $\iota_{X \to X}: X \to X$
 - *(Definition 3.4.1)* Image of sets
-    - $f(S) := \{f(x) | x \in S \}$
+    - $f(S) := \lbrace f(x) | x \in S  \rbrace$
       - $|$ reads: "for some"
       - $y \in f(S) \iff (\exists x \in X) y = f(x)$
       - $f : X \to Y$, $S \subseteq X$, $f(S) \subseteq Y$
 - *(Definition 3.4.4)* Inverse Images
-    - $f^{-1}(U) := \{x \in X | f(x) \in U \}$
+    - $f^{-1}(U) := \lbrace x \in X | f(x) \in U  \rbrace$
       - $|$ reads: "such that", "and"
       - $x \in f^{-1}(U) \iff f(x) \in U$
       - $f : X \to Y$, $U \subseteq Y$
 - Function and set with |
-    - *(Axiom 3.5 Specification)* Set $\{x \in A | P(x)\}$ exists
-    - *(Axiom 3.6 Replacement)* Set $\{y | (\exists x \in A) P(x,y) \}$ exists
-      - $z \in \{y | (\exists x \in A) P(x,y) \} \iff (\exists x \in A) P(x,z)$
-    - *(Example 3.1.32)* $\{f(x) | x \in A \}$
-      - shorthand for: $\{ y | y = f(x) \text{ for some } x \in A\}$
-      - $y \in \{f(x) | x \in A \} \iff (\exists x \in A) y = f(x)$
-    - *(Definition 3.4.1)* $f(S) := \{f(x) | x \in S \}$
+    - *(Axiom 3.5 Specification)* Set $\lbrace x \in A | P(x) \rbrace$ exists
+    - *(Axiom 3.6 Replacement)* Set $\lbrace y | (\exists x \in A) P(x,y)  \rbrace$ exists
+      - $z \in \lbrace y | (\exists x \in A) P(x,y)  \rbrace \iff (\exists x \in A) P(x,z)$
+    - *(Example 3.1.32)* $\lbrace f(x) | x \in A  \rbrace$
+      - shorthand for: $\lbrace  y | y = f(x) \text{ for some } x \in A \rbrace$
+      - $y \in \lbrace f(x) | x \in A  \rbrace \iff (\exists x \in A) y = f(x)$
+    - *(Definition 3.4.1)* $f(S) := \lbrace f(x) | x \in S  \rbrace$
 
 ### Cartesian Product of Set
 - *(Definition 3.5.1)* Ordered pair
     - Ordered pair exists: $\forall x \forall y \exists (x,y)$
-      - Proof by construction: $(x, y) := \{\{x\}, \{x, y\}\}$
+      - Proof by construction: $(x, y) := \lbrace \lbrace x \rbrace, \lbrace x, y \rbrace \rbrace$
     - Ordered pair equality: $(x, y) = (x', y') \iff x = x' \land y = y'$
 - *(Definition 3.5.4)* Cartesian Product (Collection of ordered pairs)
-  - $X \times Y := \{(x, y) | x \in X \land y \in Y\}$
+  - $X \times Y := \lbrace (x, y) | x \in X \land y \in Y \rbrace$
     - $X \times Y$ is a set, and it exists.
     - $|$ reads "for some"
     - $a \in (X \times Y) \iff (\exists x \in X) (\exists y \in Y) a = (x, y)$
@@ -189,7 +188,7 @@ Axioms come mainly in two different kinds: existential and universal.
       - $(x_i)_{1 \leq i \leq n}$
       - $(x_1, ..., x_n)$
     - Equality
-      - $(x_i)_{1 \leq i \leq n} = (y_i)_{1 \leq i \leq n} \iff (\forall i \in \{1,...,n\}) x_i = y_i$
+      - $(x_i)_{1 \leq i \leq n} = (y_i)_{1 \leq i \leq n} \iff (\forall i \in \lbrace 1,...,n \rbrace) x_i = y_i$
   - N-fold cartesian product (of an ordered n-tuple of sets)
     - Notation
       - $X^n$
@@ -197,7 +196,7 @@ Axioms come mainly in two different kinds: existential and universal.
       - $\prod_{i=1}^n X_i$
       - $(X_1 \times ... \times X_n)$
     - Definition
-      - $\prod_{1 \leq i \leq n} X_i := \{(x_i)_{1 \leq i \leq n} | (\forall i \in \{1,...,n\}) x_i \in X_i\}$
+      - $\prod_{1 \leq i \leq n} X_i := \lbrace (x_i)_{1 \leq i \leq n} | (\forall i \in \lbrace 1,...,n \rbrace) x_i \in X_i \rbrace$
         - $a \in \prod_{1 \leq i \leq n} X_i \iff [(\forall i) [(1 \leq i \leq n) \implies(\exists x_i) x_i \in X_i]] \land a = (x_j)_{1 \leq j \leq n}$
 - *(Excercise 3.5.7)* Coordinate Function and Direct Sum
   - Coordinate functions on $X \times Y$
@@ -207,14 +206,22 @@ Axioms come mainly in two different kinds: existential and universal.
     - $h$ is the direct sum of $f$ and $g$, denoted $h := f \bigoplus g$
 - *(Excercise 3.5.10)* Graph
   - $f : X \to Y$ is a function
-  - Graph of $f$ is a set: $\{(x, f(x)) | x \in X\}$
-
+  - Graph of $f$ is a set: $\lbrace (x, f(x)) | x \in X \rbrace$
 
 ## Format
-$$
+
 When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 $$
 R_{\mu \nu} - {1 \over 2}g_{\mu \nu}\,R + g_{\mu \nu} \Lambda
 = {8 \pi G \over c^4} T_{\mu \nu}
 $$
+
+
+**The Cauchy-Schwarz Inequality**
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+
+inline $\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$
+
+
+This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
