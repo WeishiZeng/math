@@ -188,7 +188,7 @@ Axioms come mainly in two different kinds: existential and universal.
       - $(x_i)_{1 \leq i \leq n}$
       - $(x_1, ..., x_n)$
     - Equality
-      - $(x_i)_{1 \leq i \leq n} = (y_i)_{1 \leq i \leq n} \iff (\forall i \in \lbrace 1,...,n \rbrace) x_i = y_i$
+      - $$(x_i)_{1 \leq i \leq n} = (y_i)_{1 \leq i \leq n} \iff (\forall i \in \lbrace 1,...,n \rbrace) x_i = y_i$$
   - N-fold cartesian product (of an ordered n-tuple of sets)
     - Notation
       - $X^n$
