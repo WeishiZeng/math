@@ -1,7 +1,3 @@
----
-katex: True
----
-
 # Natural Numbers
 ## Peano Axioms
 
