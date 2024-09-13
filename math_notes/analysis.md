@@ -467,7 +467,7 @@ Axioms come mainly in two different kinds: existential and universal.
   - Let $x$ be a real number, let $s = (a_n)_{n=0}^\infty$ be a sequence
   - $x \neq 0 \implies (\exists s) [s = (a_n)_{n=0}^\infty \land \text{ s is Cauchy} \land \text{ s is bounded away from zero} \land x = LIM_{n \rightarrow \infty}a_n ]$
 - *(Lemma 5.3.15)* Reciprocal is Cauchy
-  - $(a_n)_{n=0}^\infty$ is Cauchy sequence which is bounded away from 0 $\implies$ $(a_n^{-1})_{n=0}^\infty$ is also Cauchy
+  - $(a_n)_{n=0}^\infty \text{ is Cauchy sequence which is bounded away from 0} \implies (a_n^{-1})_{n=0}^\infty \text{ is also Cauchy}$
 - *(Definition 5.3.16)* Reciprocals of real
   - Let $x \neq 0 \land x = LIM_{n \rightarrow \infty}a_n$
     - By lemma 5.3.14, $(a_n)_{n=0}^\infty$ exists and is Cauchy and is bounded away from 0.
@@ -522,7 +522,7 @@ Axioms come mainly in two different kinds: existential and universal.
   - $x > 0 \implies x^{-1} > 0$
   - $(a_n)_{n=0}^\infty \text{ is Cauchy } \land (\forall n) a_n \geq 0 \implies LIM_{n \rightarrow \infty}a_n \geq 0$ 
 - *(Corollary 5.4.10)* LIM preserves order
-  - Let $(a_n)_{n=0}^\infty$, $(b_n)_{n=0}^\infty$ be Cauchy sequences of rationals.
+  - Let $(a_n)_{n=0}^\infty$ and $(b_n)_{n=0}^\infty$ be Cauchy sequences of rationals.
   - $(\forall n \in N) a_n \geq b_n \implies  LIM_{n \rightarrow \infty}a_n \geq LIM_{n \rightarrow \infty}b_n$
 - *(Proposition 5.4.12)* Bounding of reals by rationals
   - $x \in R^+ \implies (\exists q \in Q^+) (\exists n \in N^+) q \leq x \leq n$
@@ -555,17 +555,24 @@ Axioms come mainly in two different kinds: existential and universal.
   - d
 
 # Test
-- $ |x| $
-- $$ |x| $$
-- $ (a_n)_{n=0} $ 
-- $(a_n)_{n=0}$ 
-- $$ (a_n)_{n=0} $$
-- $(a_n)_{n=0}^\infty$ is Cauchy sequence which is bounded away from 0 $\implies$ $(a_n^{-1})_{n=0}^\infty$ is also Cauchy
-- $(a_n)_{n=0}^\infty$ is Cauchy sequence which is bounded away from 0 
-- $\implies$ $(a_n^{-1})_{n=0}^\infty$ is also Cauchy
-- $$ \int_{-3}^{3} \int_{-3}^{3} x^2 + y^3 dxdy $$
+Markdown rendering in Github page is buggy. 
+It sometimes treat the underscore inside $ $ as italic and insert html tags that breaks later latex rendering. 
 
-$ |x| $
+$|x|$  `$|x|$: | inside  $ is treated as table delimiter`
+
+$$ |x| $$  
+`$$|x|$$: works`
+
+$(a_n)_{n=0}$  `$(a_n)_{n=0}$ works`
+
+$(a_n)_{n=0}^\infty (a_n^{-1})_{n=0}^\infty$
+
+`$(a_n)_{n=0}^\infty (a_n^{-1})_{n=0}^\infty$` doesn't work. it matches up the _ as italic.
+
+
+https://nschloe.github.io/2022/05/20/math-on-github.html
+https://stackoverflow.com/q/77375192/2797254
+
 
 When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
