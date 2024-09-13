@@ -384,7 +384,7 @@ Axioms come mainly in two different kinds: existential and universal.
   - $ n > 0 \land x \geq y \gt 0 \implies x^n \geq y^n \gt 0$
     - $ n < 0 \land x \geq y \gt 0 \implies 0 \lt x^n \leq y^n$
   - $x, y > 0 \land n \neq 0 \land x^n = y^n \implies x = y$
-  - $|x^n| = \vert x \vert^n$
+  - $\vert x^n \vert = \vert x \vert^n$
 
 ### Gaps in rationals 
 - *(Proposition 4.4.1)* Interspersing of integers by rationals
@@ -405,18 +405,18 @@ Axioms come mainly in two different kinds: existential and universal.
 - *(Definition 5.1.8)* Cauchy sequences
   - A sequence $(a_n)_{n=0}^\infty$ of rational numbers is a Cauchy squence iff: 
   - $(\forall \epsilon > 0)(\exists N \geq 0) (\forall j \geq N) (\forall k \geq N) [d(a_j, a_k) \leq \epsilon]$
-- *(Definition 5.1.8)* Bounded sequences
+- *(Definition 5.1.12)* Bounded sequences
   - Let $M \geq 0$ be rational. 
   - A finite sequence $(a_i)_{i=0}^n$ is bounded by $M$ iff:
-    - $(\forall i \in [0, n]) [|a_i| \leq M]$
+    - $(\forall i \in [0, n]) [\vert a_i \vert \leq M]$
   - A infinite sequence $(a_i)_{i=0}^\infty$ is bounded by $M$ iff:
-    - $(\forall i \geq 0) [|a_i| \leq M]$
+    - $(\forall i \geq 0) [ \vert a_i \vert \leq M]$
   - A sequence is bounded iff it's bounded by $M$ for some $M \geq 0$
 - *(Lemma 5.1.14)* Every finite sequence is bounded
 - *(Lemma 5.1.15)* Every Cauchy sequence $(a_n)_{n=0}^\infty$ is bounded
 - *(Definition 5.2.6)* Equivalent sequences
   - Two sequences  $(a_n)_{n=0}^\infty$ and $(b_n)_{n=0}^\infty$ are equivalent iff:
-    - $(\forall \epsilon > 0) (\exists N \geq 0) (\forall n \geq N) |a_n - b_n| \leq \epsilon$
+    - $(\forall \epsilon > 0) (\exists N \geq 0) (\forall n \geq N) \vert a_n - b_n \vert \leq \epsilon$
 
 ## Construction of real
 - *(Definition 5.3.1)* Real numbers
@@ -552,7 +552,10 @@ Axioms come mainly in two different kinds: existential and universal.
   - Let $E \subseteq R \land E \neq \emptyset$
   - $E$ has upper bound $\implies$ $E$ has exactly one least upper bound
 - *(Definition 5.5.10)* Supremum
-  - 
+  - $ |x| $
+  - $$ |x| $$
+  - $ (a_n)_{n=0} $ 
+  - $$ (a_n)_{n=0} $$
 
 # Format Appendix
 
