@@ -556,6 +556,7 @@ Axioms come mainly in two different kinds: existential and universal.
   - $$ |x| $$
   - $ (a_n)_{n=0} $ 
   - $$ (a_n)_{n=0} $$
+$ |x| $
 
 # Format Appendix
 
