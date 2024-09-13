@@ -122,7 +122,7 @@ Axioms come mainly in two different kinds: existential and universal.
 - **(Axiom 3.10)** Power set
   -  $(\forall set X) (\forall set Y) (Y^X \ exists)$
   - $Y^X := \lbrace f \mid f: X \to Y  \rbrace$
-    - $f \in Y^X \iff f \ is \ a \ function \ with \ domain \ X \ and \ range \ Y$
+    - $f \in Y^X \iff f \text{ is a function with domain X and range Y}$
 - **(Axiom 3.11)** Union
   -  $(\forall x \in A) [x \ is \ a \ set] \implies \bigcup A \ exists$
   - $\bigcup A$ is defined as:
@@ -160,15 +160,15 @@ Axioms come mainly in two different kinds: existential and universal.
     - Identity map: $\iota_{X \to X}: X \to X$
 - *(Definition 3.4.1)* Image of sets
     - $f(S) := \lbrace f(x) \mid x \in S  \rbrace$
-      - $ \vert $ reads: "for some"
+      - $ \mid $ reads: "for some"
       - $y \in f(S) \iff (\exists x \in X) y = f(x)$
       - $f : X \to Y$, $S \subseteq X$, $f(S) \subseteq Y$
 - *(Definition 3.4.4)* Inverse Images
     - $f^{-1}(U) := \lbrace x \in X \mid f(x) \in U  \rbrace$
-      - $ \vert $ reads: "such that", "and"
+      - $ \mid $ reads: "such that", "and"
       - $x \in f^{-1}(U) \iff f(x) \in U$
       - $f : X \to Y$, $U \subseteq Y$
-- Function and set with $ \vert $ 
+- Function and set with $ \mid $ 
     - *(Axiom 3.5 Specification)* Set $\lbrace x \in A \mid P(x) \rbrace$ exists
     - *(Axiom 3.6 Replacement)* Set $\lbrace y \mid (\exists x \in A) P(x,y)  \rbrace$ exists
       - $z \in \lbrace y \mid (\exists x \in A) P(x,y)  \rbrace \iff (\exists x \in A) P(x,z)$
@@ -185,7 +185,7 @@ Axioms come mainly in two different kinds: existential and universal.
 - *(Definition 3.5.4)* Cartesian Product (Collection of ordered pairs)
   - $X \times Y := \lbrace (x, y) \mid x \in X \land y \in Y \rbrace$
     - $X \times Y$ is a set, and it exists.
-    - $ \vert $ reads "for some"
+    - $ \mid $ reads "for some"
     - $a \in (X \times Y) \iff (\exists x \in X) (\exists y \in Y) a = (x, y)$
 - *(Definition 3.5.7)* Ordered n-tuple and n-fold cartesian product
   - Ordered n-tuple
@@ -193,7 +193,7 @@ Axioms come mainly in two different kinds: existential and universal.
       - $(x_i)_{1 \leq i \leq n}$
       - $(x_1, ..., x_n)$
     - Equality
-      - $$(x_i)_{1 \leq i \leq n} = (y_i)_{1 \leq i \leq n} \iff (\forall i \in \lbrace 1,...,n \rbrace) x_i = y_i$$
+      - $(x_i)_{1 \leq i \leq n} = (y_i)_{1 \leq i \leq n} \iff (\forall i \in \lbrace 1,...,n \rbrace) x_i = y_i$
   - N-fold cartesian product (of an ordered n-tuple of sets)
     - Notation
       - $X^n$
@@ -218,7 +218,7 @@ Axioms come mainly in two different kinds: existential and universal.
   - $X$ has cardinality $n$ $\iff$ $X$ has equal cardinality with $\{i \in N \mid 1 \leq i \leq n \}$
 - *(Definition 3.6.10)* finite sets
   - Set $X$ is finite $\iff$ $X$ has cardinality $n$ for some natural number $n$
-    - $\#(X) := n$
+    - $\text{\#}(X) := n$
 
 ## Integers
 - *(Definition 4.1.1)* Integers
@@ -337,7 +337,7 @@ Axioms come mainly in two different kinds: existential and universal.
 - *(Definition 4.2.6)* Positive and negative rationals
   - A rational number $x$ is positive iff: 
     - $(\exists a \in Z^+)(\exists b \in Z^+) x = a/b$
-    - $Z^+ := \{x | x \in Z \land x > 0\}$
+    - $Z^+ := \{x \mid x \in Z \land x > 0\}$
   - A rational number $x$ is negative iff: 
     - $(\exists y \in Q)(\exists a \in Z^+)(\exists b \in Z^+) (y = a/b \land x = -y)$
 - *(Lemma 4.2.7)* Trichotomy of rationals
@@ -357,19 +357,19 @@ Axioms come mainly in two different kinds: existential and universal.
   1. Positive multiplication preserves order. $x < y \land z \text{ is positive } \implies xz < yz$
 ### Absolute value and exponentiation
 - *(Definition 4.3.1)* Absolute value
-  - $|x| := x$, if $x$ is positive
-  - $|x| := -x$, if $x$ is negative
-  - $|x| := 0$, if $x$ is 0
+  - $\vert x \vert := x$, if $x$ is positive
+  - $\vert x \vert := -x$, if $x$ is negative
+  - $\vert x \vert := 0$, if $x$ is 0
 - *(Definition 4.3.2)* Distance
-  - $d(x,y) := |x - y|$
+  - $d(x,y) := \vert x - y \vert $
 - *(Proposition 4.3.3)* Properties of absolute and distance
   - Absolute
-    1. (Non-degeneracy) $|x| \geq 0$, also $|x| = 0 \iff x = 0$ 
-    1. (Triangle inequality) $|x+y| \leq |x| + |y|$
-    1. $-y \leq x \leq y \iff y \geq |x|$
-        1. In particular: $-|x| \leq x \leq |x|$
-    1. (Multiplicativity) $|xy| = |x| \cdot |y|$
-        1. In particular: $|-x| = |x|$
+    1. (Non-degeneracy) $\vert x \vert \geq 0$, also $\vert x \vert = 0 \iff x = 0$ 
+    1. (Triangle inequality) $\vert x+y \vert \leq \vert x \vert + \vert y \vert$
+    1. $-y \leq x \leq y \iff y \geq \vert x \vert$
+        1. In particular: $-\vert x \vert \leq x \leq \vert x \vert$
+    1. (Multiplicativity) $\vert xy \vert = \vert x \vert \cdot \vert y \vert$
+        1. In particular: $\vert -x \vert = \vert x \vert$
   - Distance
     1. (Non-degeneracy) $d(x,y) \geq 0$, also $d(x,y) = 0 \iff x = y$ 
     1. (Symmetry) $d(x,y) = d(y,x)$
@@ -387,7 +387,7 @@ Axioms come mainly in two different kinds: existential and universal.
   - $ n > 0 \land x \geq y \gt 0 \implies x^n \geq y^n \gt 0$
     - $ n < 0 \land x \geq y \gt 0 \implies 0 \lt x^n \leq y^n$
   - $x, y > 0 \land n \neq 0 \land x^n = y^n \implies x = y$
-  - $|x^n| = |x|^n$
+  - $|x^n| = \vert x \vert^n$
 ### Gaps in rationals 
 - *(Proposition 4.4.1)* Interspersing of integers by rationals
   - $(\forall x \in Q) (\exists! n \in Z) n \leq x \lt n+1$
@@ -398,6 +398,7 @@ Axioms come mainly in two different kinds: existential and universal.
   - Given $p \in N$
     - $(\exists k \in N) p = 2k$
     - $(\exists k \in N) p = 2k+1$
+
 # Reals
 ## Cauchy sequences
 - *(Definition 5.1.1)* Sequences
@@ -462,7 +463,7 @@ Axioms come mainly in two different kinds: existential and universal.
     1. $(y+z)x = yx + zx$
 - *(Definition 5.3.12)* Sequence bounded away from 0
   - A sequence $(a_n)_{n=0}^\infty$ of rationals is said to be founded away from zero iff: 
-    - $(\exists c \in Q^+) (\forall n \in N) |a_n| \geq c$ 
+    - $(\exists c \in Q^+) (\forall n \in N) \vert a_n \vert \geq c$ 
 - *(Lemma 5.3.14)* Non 0 is bounded away from 0
   - Let $x$ be a real number, let $s = (a_n)_{n=0}^\infty$ be a sequence
   - $x \neq 0 \implies (\exists s) [s = (a_n)_{n=0}^\infty \land \text{ s is Cauchy} \land \text{ s is bounded away from zero} \land x = LIM_{n \rightarrow \infty}a_n ]$
@@ -499,7 +500,7 @@ Axioms come mainly in two different kinds: existential and universal.
   - $x$ is negative $\iff$ $-x$ is positive
   - $x$, $y$ are positive $\implies$ $x+y$, $xy$ are positive 
 - *(Definition 5.4.5)* Absolute value of real $x$
-  - $|x| := \begin{cases} x, & x \text{ is positive} \\ 
+  - $\vert x \vert := \begin{cases} x, & x \text{ is positive} \\ 
                          -x, & x \text{ is negative} \\
                           0, & x \text{ is zero}
                          \end{cases} $
