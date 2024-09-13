@@ -12,7 +12,11 @@
 - **(Axiom 2.5)** Principal of mathimatical induction
     - $[P(0) \land (P(n) \implies P(n++))] \implies [\forall n P(n)]$
       - $P(n)$ is a property pertaining to natural number $n$
-- **(Proposition 2.2.14)** Strong principal of induction
+- *(Definition 2.2.7)* Positive natural
+  - $n$ is positive $\iff n \neq 0$
+- *(Corollary 2.2.9)* $a + b = 0 \implies a = 0 \land b = 0$
+- *(Lemma 2.2.10)* $a > 0 \implies (\exists ! b) b++ = a$
+- *(Proposition 2.2.14)* Strong principal of induction
     - $(\forall m \ge m_0) [[(\forall m_0 \le m' < m) P(m') \implies P(m)] \implies (\forall m \ge m_0) P(m)]$
       - $m_0$ is any natrual number, $P(m)$ is a property pertaining to natural number $m$
     - Break down version:
@@ -130,7 +134,8 @@ Axioms come mainly in two different kinds: existential and universal.
 
 ## Functions
 - *(Definition 3.3.1)* Functions
-    - $(\forall set X) (\forall set Y) [(\forall x \in X) (\exists! y \in Y )P(x, y) \implies (\exists f: X \to Y) (\forall x \in X) (\exists! f(x) \in Y) P(x, f(x))]$
+    - $f: X \to Y$ is defined as:
+      - $(\forall set X) (\forall set Y) [(\forall x \in X) (\exists! y \in Y )P(x, y) \implies (\exists f: X \to Y) (\forall x \in X) (\exists! f(x) \in Y) P(x, f(x))]$
 - *(Definition 3.3.7)* Equality of Functions
     - Consider two functions $f : X \to Y$ and $g : X \to Y$
       - Note $f$ and $g$ have the same domain and range.
@@ -207,8 +212,347 @@ Axioms come mainly in two different kinds: existential and universal.
 - *(Excercise 3.5.10)* Graph
   - $f : X \to Y$ is a function
   - Graph of $f$ is a set: $\lbrace (x, f(x)) \mid x \in X \rbrace$
+- *(Definition 3.6.1)* Equal cardinality of two sets
+  - $X$ and $Y$ have equal cardinality $\iff$ there exists a bijection $f : X \to Y$
+- *(Definition 3.6.5)* Assign cardinality of set $X$ to a natural number $n$
+  - $X$ has cardinality $n$ $\iff$ $X$ has equal cardinality with $\{i \in N \mid 1 \leq i \leq n \}$
+- *(Definition 3.6.10)* finite sets
+  - Set $X$ is finite $\iff$ $X$ has cardinality $n$ for some natural number $n$
+    - $\#(X) := n$
 
-## Format
+## Integers
+- *(Definition 4.1.1)* Integers
+  - $a,b,c,d \in N$ Define equivalence relation ~ on $N \times N$
+    - $(a, b) \sim (c, d) \iff a + d = c + b$
+  - $a -- b := \lbrace (c, d) \in N \times N \mid (a, b) \sim (c, d) \rbrace$
+    - integer is defined as a set of equivalent ordered pairs of natural numbers
+  - Let $Z$ denote all set of integers. 
+- *(Definition 4.1.2)* Integer operations
+  - Sum of two
+    - $(a--b) + (c--d) := (a+c) -- (b+d)$
+      - well-defined:
+      - if $(a--b) = (a'--b')$, to show $(a--b) + (c--d) = (a'--b') + (c--d)$
+        - By "+" definition, $LHS = (a+c) -- (b+d)$ and $RHS = (a'+c) -- (b'+d)$
+        - To prove LHS = RHS is to show $(a+c)+(b'+d)=(a'+c)+(b+d)$
+        - use $(a--b) = (a'--b') \iff a+b'=a'+b$
+  - Product of two
+    - $(a--b) \times (c--d) := (ac+bd) -- (ad+bc)$
+- *(Lemma 4.1.3)* Integer addition and multiplication are **well defined**
+  - Need check Substitution Axiom holds when defining new operations (+, x) on new class (integer)
+  - Equal inputs give equal outputs
+    - If $a--b = a'--b'$, then
+      - $(a--b) + (c--d) = (a'--b') + (c--d)$
+      - $(a--b) \times (c--d) = (a'--b') \times (c--d)$
+      - $(c--d) + (a--b) = (c--d) + (a'--b')$
+      - $(c--d) \times (a--b) = (c--d) \times (a'--b')$
+- Isomorphism $n \equiv n--0$. This is valid because: 
+  - $n = m \iff (n--0) = (m--0)$
+    - Every natural number $n$ can be mapped to a unique integer $n--0$.
+  - $(n--0) + (m--0) = (n+m)--0$
+  - $(n--0) \times (m--0) = (n \times m)--0$
+    - let a, b, c be natural numbers; let A, B, C be integers; let a "identifies" A and let b "identifies" B. let c = a + b, and C = A + B. 
+    - It happens that c "identifies" C.
+- *(Definition 4.1.4)* Negation of integers
+  - $-(a--b) := (b--a)$
+  - In particular: $-(n--0)=(0--n)$, which can be written as $-n=(0--n)$
+  - Under this definition, it happens that 
+    - $-(a--b)=(0--1) \times (a--b)$
+    - 负负得正 $(-n) \times (-m) = (0--n) \times (0--m) = (nm -- 0) = nm$
+- *(Definition 4.1.4+)* Subtraction of integers
+  - $x-y := x + (-y)$
+  - Check isomorphism on natural numbers a, b:
+    - $a - b = a + (-b) = (a--0) + (0--b) = a--b$
+- *(Lemma 4.1.5)* Trichotomy of integers
+  - Exactly one statements out three in the following is true about integer $x$.
+    - $x$ is zero;
+    - $x$ is equal to a positive natural number n;
+    - $x$ is the negation $-n$ of a positive natural number $n$  
+- *(Proposition 4.1.6)* Laws of algebra for integers
+  - $Z$ forms a **Commutative ring**
+    1. $x + y = y + x$
+    1. $(x + y) + z = x + (y + z)$
+    1. $x + 0 = 0 + x = x$
+    1. $x + (-x) = (-x) + x = 0$
+    1. $xy = yx$
+    1. $x(yz) = (xy)z$
+    1. $x1 = 1x = x$
+    1. $x(y+z) = xy + xz$
+    1. $(y+z)x = yx + zx$
+- *(Proposition 4.1.8)* Integers have no zero divisors
+  - $ab = 0 \implies a = 0 \lor b=0$
+- *(Corollary 4.1.9)* Cancellation law for integers
+  - $ac = bc \land c \neq 0 \implies a = b$
+- *(Definition 4.1.10)* Ordering of integers
+  - $n \geq m \iff (\exists a \in N) n = m + a$ 
+    - $n \geq m \iff m \leq n$
+  - $n \gt m \iff n \geq m \land n \neq m$ 
+- *(Lemma 4.1.11)* Properties of order
+  1. $a > b \iff a - b \in N^+$
+  1. (Addition preserves order) $ a > b \implies a + c > b + c$
+  1. (Positive multiplication preserves order) $a > b \land c > 0 \implies ac > bc$
+  1. (Negation reverses order) $a > b \implies -a < -b$
+  1. (Order is transitive) $a > b \land b > c \implies a > c$
+  1. (Order trichotomy) Exact one of the statements is true: $a > b, a < b, a = b$
+
+## Rationals
+- *(Definition 4.2.1)* Rationals
+  - Define equivalence relation ~ on $Z \times (Z \setminus \{0\})$
+    - $(a, b) \sim (c, d) \iff ad = cb$
+  - $(a,b) \in  Z \times (Z \setminus \{0\})$, denote $a // b := \lbrace (c, d) \in Z \times (Z \setminus \{0\}) \mid (a, b) \sim (c, d) \rbrace$
+    - rational is defined as a set of equivalent ordered pairs of integers
+  - Let $Q$ denote all set of rationals. 
+- *(Definition 4.2.2)* Rationals' sum, product and negation
+  - $a//b + c//d := (ad + bc) // (bd)$
+  - $(a//b) \times (c//d) := (ac) // (bd)$
+    - Observe the result is also a rational. $b \neq 0 \land d \neq 0 \implies bd \neq 0$ by Prop 4.1.8 (Excercise 4.1.5)
+  - $-(a//b) = (-a)//b$
+- *(Lemma 4.2.3)* Definition 4.2.2 is **well defined**
+- Isomorphism $a \equiv a//1$ for any integer $a$. This is valid because: 
+  - $a = b \iff (a//1) = (b//1)$
+    - Equiality definition is consistent with integers
+  - $(a//1) + (b//1) = (a+b)//1$
+  - $(a//1) \times (b//1) = (ab)//1$
+  - $-(a//1) = (-a)//1$
+    - Arithmetic of integers is consistent with arithmetic of rationals. 
+- *(Lemma 4.2.3+)* Reciprocal
+  - $x = a//b$ where $a \neq 0 \land b \neq 0$
+  - $x^{-1} := b//a$
+- *(Proposition 4.2.4)* Laws of algebra for rationals
+  - $Q$ forms a **Field**
+    1. $x + y = y + x$
+    1. $(x + y) + z = x + (y + z)$
+    1. $x + 0 = 0 + x = x$
+    1. $x + (-x) = (-x) + x = 0$
+    1. $xy = yx$
+    1. $x(yz) = (xy)z$
+    1. $x1 = 1x = x$
+    1. $x(y+z) = xy + xz$
+    1. $(y+z)x = yx + zx$
+    1. $xx^{-1} = x^{-1}x= 1$, when $x \neq 0$
+    
+- *(Proposition 4.2.4+)* Quotient/substractions of rationals
+  - $x/y := x \times y^{-1}$, when $y \neq 0$
+  - $x-y := x + (-y)$
+
+- *(Definition 4.2.6)* Positive and negative rationals
+  - A rational number $x$ is positive iff: 
+    - $(\exists a \in Z^+)(\exists b \in Z^+) x = a/b$
+    - $Z^+ := \{x | x \in Z \land x > 0\}$
+  - A rational number $x$ is negative iff: 
+    - $(\exists y \in Q)(\exists a \in Z^+)(\exists b \in Z^+) (y = a/b \land x = -y)$
+- *(Lemma 4.2.7)* Trichotomy of rationals
+  - Let $x$ be a rational number, exact one of the three statement is true
+    1. $x$ is equal to zero,
+    1. $x$ is a positive rational number,
+    1. $x$ is a negative rational number.
+- *(Definition 4.2.8)* Ordering of rationals
+  - $x > y \iff x - y \text{ is a positive rational number}$ 
+    - $x >= y \iff x - y \lor x = y$ 
+  - $x < y \iff x - y \text{ is a negative rational number}$ 
+- *(Proposition 4.2.9)* Properties of order on rationals (**Ordered field**)
+  1. Order Trichotomy. Exactly one of three is true: $x = y$, $x < y$, or $x > y$
+  1. Order is anti-symmetric. $x < y \iff y > x$  
+  1. Order is transitive. $x < y \land y < z \implies x < z$
+  1. Addition preserves order. $x < y \implies x + z < y + z$
+  1. Positive multiplication preserves order. $x < y \land z \text{ is positive } \implies xz < yz$
+### Absolute value and exponentiation
+- *(Definition 4.3.1)* Absolute value
+  - $|x| := x$, if $x$ is positive
+  - $|x| := -x$, if $x$ is negative
+  - $|x| := 0$, if $x$ is 0
+- *(Definition 4.3.2)* Distance
+  - $d(x,y) := |x - y|$
+- *(Proposition 4.3.3)* Properties of absolute and distance
+  - Absolute
+    1. (Non-degeneracy) $|x| \geq 0$, also $|x| = 0 \iff x = 0$ 
+    1. (Triangle inequality) $|x+y| \leq |x| + |y|$
+    1. $-y \leq x \leq y \iff y \geq |x|$
+        1. In particular: $-|x| \leq x \leq |x|$
+    1. (Multiplicativity) $|xy| = |x| \cdot |y|$
+        1. In particular: $|-x| = |x|$
+  - Distance
+    1. (Non-degeneracy) $d(x,y) \geq 0$, also $d(x,y) = 0 \iff x = y$ 
+    1. (Symmetry) $d(x,y) = d(y,x)$
+    1. (Triangle inequality) $d(x,z) \leq d(x,y) + d(y,z)$
+- *(Definition 4.3.4)* $\epsilon$-closeness
+  - $y$ is $\epsilon$-close to $x$ $\iff d(y,x) \leq \epsilon$
+- *(Definition 4.3.9)* Exponetiation to a natural number
+  - $x^0 := 1$
+  - $x^{n+1} := x^n \times x$
+- *(Definition 4.3.11)* Exponetiation to a negative integer
+  - $x \neq 0$ and for any negative integer $-n$: 
+  - $x^{-n} := 1/x^n$
+- *(Definition 4.3.12)* Properties of exponetiation, Let $x, y \in Q \land x, y \neq 0 \land n, m \in Z$
+  - $x^nx^m = x^{n+m}$, $(x^n)^m = x^{nm}$, $(xy)^n = x^n y^n$
+  - $ n > 0 \land x \geq y \gt 0 \implies x^n \geq y^n \gt 0$
+    - $ n < 0 \land x \geq y \gt 0 \implies 0 \lt x^n \leq y^n$
+  - $x, y > 0 \land n \neq 0 \land x^n = y^n \implies x = y$
+  - $|x^n| = |x|^n$
+### Gaps in rationals 
+- *(Proposition 4.4.1)* Interspersing of integers by rationals
+  - $(\forall x \in Q) (\exists! n \in Z) n \leq x \lt n+1$
+  - *(Remark 4.4.2) integer part* $n = \lfloor x \rfloor$ 
+- *(Proposition 4.4.3)* Interspersing of rationals by rationals
+  - $(\forall x \in Q)(\forall y \in Q)[x \lt y \implies (\exists z \in Q) x \lt z \lt y]$
+- *(Proposition 4.4.4+)* Even and odd natural number
+  - Given $p \in N$
+    - $(\exists k \in N) p = 2k$
+    - $(\exists k \in N) p = 2k+1$
+# Reals
+## Cauchy sequences
+- *(Definition 5.1.1)* Sequences
+  - $m$ is an integer, a sequence $(a_n)_{n=m}^\infty$ of rational numbers is any function $f$:
+  - $f: \{n \in Z : n \geq m\} \to Q$
+- *(Definition 5.1.8)* Cauchy sequences
+  - A sequence $(a_n)_{n=0}^\infty$ of rational numbers is a Cauchy squence iff: 
+  - $(\forall \epsilon > 0)(\exists N \geq 0) (\forall j \geq N) (\forall k \geq N) [d(a_j, a_k) \leq \epsilon]$
+- *(Definition 5.1.8)* Bounded sequences
+  - Let $M \geq 0$ be rational. 
+  - A finite sequence $(a_i)_{i=0}^n$ is bounded by $M$ iff:
+    - $(\forall i \in [0, n]) [|a_i| \leq M]$
+  - A infinite sequence $(a_i)_{i=0}^\infty$ is bounded by $M$ iff:
+    - $(\forall i \geq 0) [|a_i| \leq M]$
+  - A sequence is bounded iff it's bounded by $M$ for some $M \geq 0$
+- *(Lemma 5.1.14)* Every finite sequence is bounded
+- *(Lemma 5.1.15)* Every Cauchy sequence $(a_n)_{n=0}^\infty$ is bounded
+- *(Definition 5.2.6)* Equivalent sequences
+  - Two sequences  $(a_n)_{n=0}^\infty$ and $(b_n)_{n=0}^\infty$ are equivalent iff:
+    - $(\forall \epsilon > 0) (\exists N \geq 0) (\forall n \geq N) |a_n - b_n| \leq \epsilon$
+## Construction of real
+- *(Definition 5.3.1)* Real numbers
+  - A real number is defined to be an object of form $LIM_{n \rightarrow \infty}a_n$
+    - where $(a_n)_{n=0}^\infty$ is a Cauchy sequence of rational numbers
+  - Two real numbers $LIM_{n \rightarrow \infty}a_n$ and $LIM_{n \rightarrow \infty}b_n$ are said to be equal iff: 
+    - $(a_n)_{n=0}^\infty$ and $(b_n)_{n=0}^\infty$ are equivalent Cauchy sequences.
+- *(Proposition 5.3.3)* Formal limits are well defined
+  - Reflexive: $x = x$
+  - Symmetric: $x = y \iff y = x$
+  - Transitive: $x = y \land y = z \implies x = z$
+- *(Definition 5.3.4)* Addition
+  - let $x = LIM_{n \rightarrow \infty}a_n$ and $y = LIM_{n \rightarrow \infty}b_n$
+  - $x + y := LIM_{n \rightarrow \infty}(a_n + b_n)$
+- *(Lemma 5.3.6)* Addition of two real number is also a real number
+- *(Lemma 5.3.7)* Addition obeys Axiom of substitution
+  - $x = x' \implies x + y = x' + y$
+- *(Definition 5.3.9)* Multiplication
+  - let $x = LIM_{n \rightarrow \infty}a_n$ and $y = LIM_{n \rightarrow \infty}b_n$
+  - $xy := LIM_{n \rightarrow \infty}(a_nb_n)$
+- *(Proposition 5.3.10)* Multiplication is well defined
+  - Multiplication of two real number is also a real number
+  - Multiplication obeys Axiom of substitution, i.e. $x=x' \implies xy = x'y$
+- *(Proposition 5.3.10+)* Embed rational in real
+  - Isomorphism $q \equiv LIM_{n \rightarrow \infty}q$ for any rational $q$. This is valid because: 
+    - $a = b \iff LIM_{n \rightarrow \infty}a = LIM_{n \rightarrow \infty}b$
+    - $LIM_{n \rightarrow \infty}a + LIM_{n \rightarrow \infty}b = LIM_{n \rightarrow \infty}(a + b)$
+    - $LIM_{n \rightarrow \infty}a \times LIM_{n \rightarrow \infty}b = LIM_{n \rightarrow \infty}(a \times b)$
+    - Thus when add, multiply or equal-compare two rationals, it doesn't matter whether one thinks it as rational numbers $a$ or as real numbers $LIM_{n \rightarrow \infty}a$
+- *(Definition 5.3.10+)* Extended operations
+  - Negation: $-x := (-1) \times x$
+  - Subtraction: $x-y := x + (-y)$
+- *(Proposition 5.3.11)* Laws of algebra as integer Proposition 4.1.6
+  - $R$ forms a **Commutative ring**
+    1. $x + y = y + x$
+    1. $(x + y) + z = x + (y + z)$
+    1. $x + 0 = 0 + x = x$
+    1. $x + (-x) = (-x) + x = 0$
+    1. $xy = yx$
+    1. $x(yz) = (xy)z$
+    1. $x1 = 1x = x$
+    1. $x(y+z) = xy + xz$
+    1. $(y+z)x = yx + zx$
+- *(Definition 5.3.12)* Sequence bounded away from 0
+  - A sequence $(a_n)_{n=0}^\infty$ of rationals is said to be founded away from zero iff: 
+    - $(\exists c \in Q^+) (\forall n \in N) |a_n| \geq c$ 
+- *(Lemma 5.3.14)* Non 0 is bounded away from 0
+  - Let $x$ be a real number, let $s = (a_n)_{n=0}^\infty$ be a sequence
+  - $x \neq 0 \implies (\exists s) [s = (a_n)_{n=0}^\infty \land \text{ s is Cauchy} \land \text{ s is bounded away from zero} \land x = LIM_{n \rightarrow \infty}a_n ]$
+- *(Lemma 5.3.15)* Reciprocal is Cauchy
+  - $(a_n)_{n=0}^\infty$ is Cauchy sequence which is bounded away from 0 $\implies$ $(a_n^{-1})_{n=0}^\infty$ is also Cauchy
+- *(Definition 5.3.16)* Reciprocals of real
+  - Let $x \neq 0 \land x = LIM_{n \rightarrow \infty}a_n$
+    - By lemma 5.3.14, $(a_n)_{n=0}^\infty$ exists and is Cauchy and is bounded away from 0.
+  - Define reciprocal $x^{-1} := LIM_{n \rightarrow \infty}a_n^{-1}$
+    - By lemma 5.3.15, $(a_n^{-1})_{n=0}^\infty$ is Cauchy thus we can have  $LIM_{n \rightarrow \infty}a_n^{-1}$
+- *(Lemma 5.3.17)* Reciprocation is well defined
+  - Let $(a_n)_{n=0}^\infty$ and $(b_n)_{n=0}^\infty$ be two Cauchy sequences bounded away from 0, then: 
+  - $LIM_{n \rightarrow \infty}a_n = LIM_{n \rightarrow \infty}b_n \implies LIM_{n \rightarrow \infty}a_n^{-1} = LIM_{n \rightarrow \infty}b_n^{-1} $
+- *(Lemma 5.3.17+)* $R$ forms a **Field** (since $xx^{-1} = x^{-1}x = 1$)
+- *(Lemma 5.3.17+)* Extended operations
+  - Division: $x/y := x \times y^{-1}$
+## Ordering of real
+- *(Definition 5.4.1)* Positive/negative bounded away from zero
+  - Let $(a_n)_{n=0}^\infty$ be a sequence of rationals. $c \in Q$, $n \in N$
+  - Positively bounded away from zero iff:
+    - $(\exists c > 0) (\forall n) a_n \geq c$
+  - Negatively bounded away from zero iff:
+    - $(\exists -c < 0) (\forall n) a_n \leq -c$
+- *(Definition 5.4.3)* Positive/negative real numbers
+  - $x$ is positive iff:
+    - $(\exists s) [s = (a_n)_{n=0}^\infty \land \text{ s is Cauchy} \land \text{ s is positively bounded away from zero} \land x = LIM_{n \rightarrow \infty}a_n ]$
+  - $x$ is negative iff:
+    - $(\exists s) [s = (a_n)_{n=0}^\infty \land \text{ s is Cauchy} \land \text{ s is negatively bounded away from zero} \land x = LIM_{n \rightarrow \infty}a_n ]$
+- *(Proposition 5.4.4)* Properties of positive reals
+  - Trichotomy: for real number $x$, exact one of three is true:
+    1. $x$ is zero
+    1. $x$ is postive
+    1. $x$ is negative
+  - $x$ is negative $\iff$ $-x$ is positive
+  - $x$, $y$ are positive $\implies$ $x+y$, $xy$ are positive 
+- *(Definition 5.4.5)* Absolute value of real $x$
+  - $|x| := \begin{cases} x, & x \text{ is positive} \\ 
+                         -x, & x \text{ is negative} \\
+                          0, & x \text{ is zero}
+                         \end{cases} $
+- *(Definition 5.4.6)* Ordering of real $x, y$
+  - $x>y \iff x-y \text{ is positive}$
+    - $x \geq y \iff x > y \lor x = y$
+  - $x<y \iff x-y \text{ is negative}$
+    - $x \leq y \iff x < y \lor x = y$
+- *(Proposition 5.4.7)* Properties of order on reals (**Ordered field**), same as Proposition 4.2.9.
+  1. Order Trichotomy. Exactly one of three is true: $x = y$, $x < y$, or $x > y$
+  1. Order is anti-symmetric. $x < y \iff y > x$  
+  1. Order is transitive. $x < y \land y < z \implies x < z$
+  1. Addition preserves order. $x < y \implies x + z < y + z$
+  1. Positive multiplication preserves order. $x < y \land z \text{ is positive } \implies xz < yz$
+- *(Proposition 5.4.8)* Positive reciprocal reverses order
+  - $x > 0 \implies x^{-1} > 0$
+  - $x > 0 \land y > 0 \land x > y \implies x^{-1} < y^{-1}$
+- *(Proposition 5.4.9)* Non-negative reals are closed
+  - $x > 0 \implies x^{-1} > 0$
+  - $(a_n)_{n=0}^\infty \text{ is Cauchy } \land (\forall n) a_n \geq 0 \implies LIM_{n \rightarrow \infty}a_n \geq 0$ 
+- *(Corollary 5.4.10)* LIM preserves order
+  - Let $(a_n)_{n=0}^\infty$, $(b_n)_{n=0}^\infty$ be Cauchy sequences of rationals.
+  - $(\forall n \in N) a_n \geq b_n \implies  LIM_{n \rightarrow \infty}a_n \geq LIM_{n \rightarrow \infty}b_n$
+- *(Proposition 5.4.12)* Bounding of reals by rationals
+  - $x \in R^+ \implies (\exists q \in Q^+) (\exists n \in N^+) q \leq x \leq n$
+- *(Corrollary 5.4.13)* Archimedian Property
+  - $x, \epsilon \in R^+ \implies (\exists M \in N^+) M \epsilon > x $
+- *(Corrollary 5.4.14)* Interspersing of reals by rationals
+  - $(\forall x,y \in R) x < y \implies (\exists q \in Q) x < q < y$
+- *(Excercise 5.4.3)* Interspersing of integers by reals
+  - $(\forall x \in R) (\exists! n \in Z) n \leq x \lt n+1$
+  - Integer part $n = \lfloor x \rfloor$ 
+- *(Excercise 5.4.8)* LIM preserves order
+  - Let $(a_n)_{n=0}^{\infty}$ be a Cauchy sequence of rationals; let $x$ be real
+  - $(\forall n \in N) a_n \leq x \implies LIM_{n \rightarrow \infty}a_n \leq x$ 
+## Least upper bound
+- *(Definition 5.5.1)* Upper bound
+  - Let $E \subseteq R, M \in R$
+  - $M$ is upper bound for $E \iff (\forall x \in E) x \leq M$
+- *(Definition 5.5.5)* Least upper bound
+  - Let $E \subseteq R, M \in R$
+  - $M$ is least upper bound for $E$ iff:
+    1. $M$ is upper bound for $E$
+    1. $(\forall M') [$ $M'$ is upperbound for $E \implies M' \geq M]$ 
+- *(Proposition 5.5.8)* Uniqueness of least upper bound
+  - Let $E \subseteq R$, $E$ can have at most one least upper bound
+- **(Theorem 5.5.9)** Existence of least upper bound
+  - Let $E \subseteq R \land E \neq \emptyset$
+  - $E$ has upper bound $\implies$ $E$ has exactly one least upper bound
+- *(Definition 5.5.10)* Supremum
+  - 
+
+# Format Appendix
 
 When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
@@ -216,7 +560,7 @@ $$
 R_{\mu \nu} - {1 \over 2}g_{\mu \nu}\,R + g_{\mu \nu} \Lambda
 = {8 \pi G \over c^4} T_{\mu \nu}
 $$
-
+ $\frac1{x^{n}x^{m}} = \frac1{x^{n+m}} = x^{-n-m}$
 
 **The Cauchy-Schwarz Inequality**
 $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
