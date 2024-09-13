@@ -552,13 +552,18 @@ Axioms come mainly in two different kinds: existential and universal.
   - Let $E \subseteq R \land E \neq \emptyset$
   - $E$ has upper bound $\implies$ $E$ has exactly one least upper bound
 - *(Definition 5.5.10)* Supremum
-  - $ |x| $
-  - $$ |x| $$
-  - $ (a_n)_{n=0} $ 
-  - $$ (a_n)_{n=0} $$
-$ |x| $
+  - d
 
-# Format Appendix
+# Test
+- $ |x| $
+- $$ |x| $$
+- $ (a_n)_{n=0} $ 
+- $(a_n)_{n=0}$ 
+- $$ (a_n)_{n=0} $$
+- $(a_n)_{n=0}^\infty$ is Cauchy sequence which is bounded away from 0 $\implies$ $(a_n^{-1})_{n=0}^\infty$ is also Cauchy
+- $(a_n)_{n=0}^\infty$
+
+$ |x| $
 
 When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
