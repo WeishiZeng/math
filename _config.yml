@@ -5,6 +5,4 @@ relative_links:
   collections: true
 include:
   - analysis.md
-markdown: kramdown
-kramdown:
-    math_engine: katex
+  
