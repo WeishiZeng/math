@@ -64,15 +64,12 @@ How equality is defined depends on the class type of objects under consideration
     - Similarly, for any property P(x) depending on x, if x = y, then P(x) and P(y) are equivalent statements.
     - Note, when introducing an opertion to objects of type T, it's considered a **well-defined** operation only if it follows the Substitution axiom.
 
-
-
 # Set Theory
 ## Axiom vs. Definition
 An axiom is a assumption/rule that we decide we will follow/enforce.
 Axioms come mainly in two different kinds: existential and universal.
 1. Existential: there exists an empty set
 2. Universal: all right angles are equal (?)
-
 
 ### ZFC Axiom of Set Theory
 - *(Definition 3.1.1)* Informal Set
@@ -218,7 +215,7 @@ Axioms come mainly in two different kinds: existential and universal.
   - $X$ has cardinality $n$ $\iff$ $X$ has equal cardinality with $\{i \in N \mid 1 \leq i \leq n \}$
 - *(Definition 3.6.10)* finite sets
   - Set $X$ is finite $\iff$ $X$ has cardinality $n$ for some natural number $n$
-    - $\text{\#}(X) := n$
+    - $\#(X) := n$
 
 ## Integers
 - *(Definition 4.1.1)* Integers
@@ -388,6 +385,7 @@ Axioms come mainly in two different kinds: existential and universal.
     - $ n < 0 \land x \geq y \gt 0 \implies 0 \lt x^n \leq y^n$
   - $x, y > 0 \land n \neq 0 \land x^n = y^n \implies x = y$
   - $|x^n| = \vert x \vert^n$
+
 ### Gaps in rationals 
 - *(Proposition 4.4.1)* Interspersing of integers by rationals
   - $(\forall x \in Q) (\exists! n \in Z) n \leq x \lt n+1$
@@ -419,6 +417,7 @@ Axioms come mainly in two different kinds: existential and universal.
 - *(Definition 5.2.6)* Equivalent sequences
   - Two sequences  $(a_n)_{n=0}^\infty$ and $(b_n)_{n=0}^\infty$ are equivalent iff:
     - $(\forall \epsilon > 0) (\exists N \geq 0) (\forall n \geq N) |a_n - b_n| \leq \epsilon$
+
 ## Construction of real
 - *(Definition 5.3.1)* Real numbers
   - A real number is defined to be an object of form $LIM_{n \rightarrow \infty}a_n$
@@ -480,6 +479,7 @@ Axioms come mainly in two different kinds: existential and universal.
 - *(Lemma 5.3.17+)* $R$ forms a **Field** (since $xx^{-1} = x^{-1}x = 1$)
 - *(Lemma 5.3.17+)* Extended operations
   - Division: $x/y := x \times y^{-1}$
+
 ## Ordering of real
 - *(Definition 5.4.1)* Positive/negative bounded away from zero
   - Let $(a_n)_{n=0}^\infty$ be a sequence of rationals. $c \in Q$, $n \in N$
@@ -536,6 +536,7 @@ Axioms come mainly in two different kinds: existential and universal.
 - *(Excercise 5.4.8)* LIM preserves order
   - Let $(a_n)_{n=0}^{\infty}$ be a Cauchy sequence of rationals; let $x$ be real
   - $(\forall n \in N) a_n \leq x \implies LIM_{n \rightarrow \infty}a_n \leq x$ 
+
 ## Least upper bound
 - *(Definition 5.5.1)* Upper bound
   - Let $E \subseteq R, M \in R$
