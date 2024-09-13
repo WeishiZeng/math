@@ -561,7 +561,9 @@ Axioms come mainly in two different kinds: existential and universal.
 - $(a_n)_{n=0}$ 
 - $$ (a_n)_{n=0} $$
 - $(a_n)_{n=0}^\infty$ is Cauchy sequence which is bounded away from 0 $\implies$ $(a_n^{-1})_{n=0}^\infty$ is also Cauchy
-- $(a_n)_{n=0}^\infty$
+- $(a_n)_{n=0}^\infty$ is Cauchy sequence which is bounded away from 0 
+- $\implies$ $(a_n^{-1})_{n=0}^\infty$ is also Cauchy
+- $$ \int_{-3}^{3} \int_{-3}^{3} x^2 + y^3 dxdy $$
 
 $ |x| $
 
